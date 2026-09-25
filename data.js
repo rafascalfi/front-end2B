@@ -35,9 +35,9 @@ window.PROJECTS_DATA = [
   {
     id: 5,
     nome: "Nickolas Paganini Nascimento",
-    titulo: "Projeto (2 Anexos)",
-    categoria: "Arquivos Anexados",
-    url: "https://classroom.google.com/g/tg/ODcwNjU4OTgzNTc4/ODI2MzQxOTYxNDU4?authuser=1#u=NzkzNTA1ODIyNTYy",
+    titulo: "Bytehub — Aprenda e venda cursos online",
+    categoria: "Educação & Cursos Online",
+    url: "https://byteonego.netlify.app/",
     status: "Entregue"
   },
   {
@@ -59,9 +59,9 @@ window.PROJECTS_DATA = [
   {
     id: 8,
     nome: "Victor Hugo Paulino",
-    titulo: "Projeto (2 Anexos)",
-    categoria: "Arquivos Anexados",
-    url: "https://classroom.google.com/g/tg/ODcwNjU4OTgzNTc4/ODI2MzQxOTYxNDU4?authuser=1#u=NzkzNTA2MjA5NjUw",
+    titulo: "Flash News 2026",
+    categoria: "Portal de Notícias",
+    url: "https://vpaulino341-eng.github.io/flashnews/",
     status: "Entregue"
   }
 ];

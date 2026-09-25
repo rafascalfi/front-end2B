@@ -552,11 +552,11 @@
           <p>Netlify Sites</p>
         </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-icon classroom"><i class="fa-solid fa-paperclip"></i></div>
+      <div class="stat-card" id="statClassroomCard">
+        <div class="stat-icon classroom" id="statClassroomIconContainer"><i class="fa-solid fa-circle-check" id="statClassroomIcon"></i></div>
         <div class="stat-info">
-          <h3 id="statClassroom">2</h3>
-          <p>Anexos no Classroom</p>
+          <h3 id="statClassroom">100%</h3>
+          <p id="statClassroomLabel">Sites Publicados</p>
         </div>
       </div>
     </div>
@@ -569,9 +569,8 @@
       </div>
       <div class="filter-tabs">
         <button class="tab-btn active" data-filter="all">Todos (<span id="countAll">8</span>)</button>
-        <button class="tab-btn" data-filter="github"><i class="fa-brands fa-github"></i> GitHub</button>
-        <button class="tab-btn" data-filter="netlify"><i class="fa-solid fa-bolt"></i> Netlify</button>
-        <button class="tab-btn" data-filter="classroom"><i class="fa-solid fa-paperclip"></i> Anexos</button>
+        <button class="tab-btn" data-filter="github"><i class="fa-brands fa-github"></i> GitHub (<span id="countGithub">5</span>)</button>
+        <button class="tab-btn" data-filter="netlify"><i class="fa-solid fa-bolt"></i> Netlify (<span id="countNetlify">3</span>)</button>
       </div>
     </div>
 
@@ -652,8 +651,17 @@
       document.getElementById('statTotal').textContent = total;
       document.getElementById('statGithub').textContent = gh;
       document.getElementById('statNetlify').textContent = netlify;
-      document.getElementById('statClassroom').textContent = classroom;
-      document.getElementById('countAll').textContent = total;
+      if (document.getElementById('countAll')) document.getElementById('countAll').textContent = total;
+      if (document.getElementById('countGithub')) document.getElementById('countGithub').textContent = gh;
+      if (document.getElementById('countNetlify')) document.getElementById('countNetlify').textContent = netlify;
+
+      if (classroom === 0) {
+        document.getElementById('statClassroom').textContent = '100%';
+        document.getElementById('statClassroomLabel').textContent = 'Sites Publicados';
+      } else {
+        document.getElementById('statClassroom').textContent = classroom;
+        document.getElementById('statClassroomLabel').textContent = 'Anexos no Classroom';
+      }
     }
 
     function renderCards(items) {
